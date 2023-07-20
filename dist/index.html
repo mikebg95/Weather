@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/css/main.min.css">
+    <script src="js/main.js" type="module"></script>
+</head>
+<body>
+    <main class="fade-in">
+        <section id="searchBar" class="searchBar fade-in">
+            <form id="searchBar__form" class="searchBar__form">
+                <!-- <label for="searchBar__text">City, State, Country</label> -->
+                <input id="searchBar__text" class="searchBar__text" type="text" placeholder="City, State, Country">
+                <button id="searchBar__button" class="searchBar__button button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fas fa-sync fa-spin none"></i>
+                </button>
+            </form>
+        </section>
+
+        <section id="currentForecast" class="currentForecast fade-in">
+            <div>
+                <h2 id="currentForecast__location" class="currentForecast__location">Current Conditions:</h2>
+                <div id="currentForecast__conditions" class="currentForecast__conditions">
+
+                    <div class="icon" id="icon"><i class="far fa-sun" title="clear sky"></i></div>
+                    <div class="temp">59°<div class="unit">F</div></div>
+                    <div class="desc">Clear Sky</div>
+                    <div class="feels">Feels like 53°C</div>
+                    <div class="maxtemp">High 62°C</div>
+                    <div class="mintemp">Low 39°C</div>
+                    <div class="humidity">Humidity 44%</div>
+                    <div class="wind">Wind 7 mph</div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <nav id="navButtons" class="navButtons fade-in">
+            <button id="getLocation" class="button" title="Get Location">
+                <i class="fas fa-map-marker-alt"></i>
+                <i class="fas fa-sync fa-spin none"></i>
+            </button>
+            <button id="home" class="button" title="Home weather">
+                <i class="fas fa-home"></i>
+                <i class="fas fa-sync fa-spin none"></i>
+            </button>
+            <button id="saveLocation" class="button" title="Save Location">
+                <i class="fas fa-save"></i>
+                <i class="fas fa-sync fa-spin none"></i>
+            </button>
+            <button id="unit" class="button" title="Toggle measurement units">
+                <i class="fas fa-chart-bar"></i>
+                <i class="fas fa-sync fa-spin none"></i>
+            </button>
+            <button id="refresh" class="button" title="Refresh Weather">
+                <i class="fas fa-sync-alt"></i>                
+                <i class="fas fa-sync fa-spin none"></i>
+            </button>
+        </nav>
+        <hr>
+
+        <section id="dailyForecast" class="dailyForecast fade-in">
+            <h2 id="dailyForecast__title" class="dailyForecast__title">
+                Six day forecast
+            </h2>
+            <div id="dailyForecast__contents" class="dailyForecast__contents">
+
+                <div class="forecastDay">
+                    <p class="dayAbbreviation">SUN</p>
+                    <img src="https://openweathermap.org/img/wn/03d.png" alt="scattered clouds">
+                    <p class="dayHigh">61°C</p>
+                    <p class="dayLow">44°C</p>
+                </div>
+                
+                <div class="forecastDay">
+                    <p class="dayAbbreviation">MON</p>
+                    <img src="https://openweathermap.org/img/wn/03d.png" alt="scattered clouds">
+                    <p class="dayHigh">62°C</p>
+                    <p class="dayLow">46°C</p>
+                </div>
+
+                <div class="forecastDay">
+                    <p class="dayAbbreviation">TUE</p>
+                    <img src="https://openweathermap.org/img/wn/04d.png" alt="overcast clouds">
+                    <p class="dayHigh">61°C</p>
+                    <p class="dayLow">52°C</p>
+                </div>
+
+                <div class="forecastDay">
+                    <p class="dayAbbreviation">WED</p>
+                    <img src="https://openweathermap.org/img/wn/10d.png" alt="moderate rain">
+                    <p class="dayHigh">70°C</p>
+                    <p class="dayLow">60°C</p>
+                </div>
+
+                <div class="forecastDay">
+                    <p class="dayAbbreviation">THU</p>
+                    <img src="https://openweathermap.org/img/wn/10d.png" alt="moderate rain">
+                    <p class="dayHigh">60°C</p>
+                    <p class="dayLow">47°C</p>
+                </div>
+
+                <div class="forecastDay">
+                    <p class="dayAbbreviation">THU</p>
+                    <img src="https://openweathermap.org/img/wn/03d.png" alt="scattered clouds">
+                    <p class="dayHigh">44°C</p>
+                    <p class="dayLow">35°C</p>
+                </div>
+
+                <div class="forecastDay">
+                    <p class="dayAbbreviation">FRI</p>
+                    <img src="https://openweathermap.org/img/wn/10d.png" alt="scattered clouds">
+                    <p class="dayHigh">61°C</p>
+                    <p class="dayLow">44°C</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
